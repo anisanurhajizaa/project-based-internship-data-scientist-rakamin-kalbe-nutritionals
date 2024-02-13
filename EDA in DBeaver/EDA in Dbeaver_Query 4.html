@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/><style>
+table {border: medium solid #6495ed;border-collapse: collapse;width: 100%;} th{font-family: monospace;border: thin solid #6495ed;padding: 5px;background-color: #D0E3FA;}td{font-family: sans-serif;border: thin solid #6495ed;padding: 5px;text-align: center;}.odd{background:#e8edff;}img{padding:5px; border:solid; border-color: #dddddd #aaaaaa #aaaaaa #dddddd; border-width: 1px 2px 2px 1px; background-color:white;}</style>
+</head>
+<body>
+<table><tr><th colspan="2">SELECT product."Product Name"  , SUM(transaction.totalamount) AS total_amount <br>FROM transaction<br>JOIN product ON transaction.productid =  product.productid<br>GROUP BY product."Product Name"<br>ORDER BY total_amount DESC<br>LIMIT 1</th></tr><tr><th>Product Name</th><th>total_amount</th></tr><tr class="odd"><td>Cheese Stick</td><td>27,615,000</td></tr>
+</table></body></html>
